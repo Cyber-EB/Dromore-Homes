@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>About</title>
+        <link rel="stylesheet" href="Buy.css">
+        <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
+    <style>
+    body {
+    font-family: 'Libre Franklin';font-size: 20px;
+    }
+</style>
+    </head>
+
+
+    <body>
+
+        <section id = "Navigation">
+            <ul class=c-nav>
+                <li class=c-nav__item>
+                    <a href="Home.html" class=c-nav__link>Home</a>
+                </li>
+                <li class=c-nav__item>
+                    <a href="Morgages.html" class=c-nav__link>Mortgages</a>
+                </li>
+                <li class=c-nav__item>
+                    <a href="Buy.html" class=c-nav__link id = active>Buy</a>
+                </li>
+                <li class=c-nav__item>
+                    <a href="About.html" class=c-nav__link>About</a>
+                </li>
+                <li class=c-nav__item>
+                    <a href="Booking.html" class=c-nav__link>Booking</a>
+                </li>
+            </ul>       
+        </section>
+
+        <section>
+            <p id = "anchor">This is a BTEC IT project not affiliated with Property Partners</p>
+        </section>
+
+        <section id = "searchSection">
+
+            <div> <!-- TODO: Search function in JavaScript -->
+            <input type="text" id="townInput" onkeyup="searchFunction()" placeholder="Town, Area, Postcode or Address">
+            </div>
+
+            <p>Showing 1 - 6 of 6 properties in Northern Ireland page 1</p> <!-- TODO: Change Later in JavaScript-->
+
+            <div>
+                <label for="minPrice">Min Price:</label>
+                    <select name="minPrice" id="minPrice">
+                        <option>£80,000</option>
+                        <option>£100,000</option>
+                        <option>£120,000</option>
+                        <option>£140,000</option>
+                        <option>£160,000</option>
+                        <option>£180,000</option>
+                        <option>£200,000</option>
+                        <option>£220,000</option>
+                        <option>£240,000</option>
+                        <option>£260,000</option>
+                        <option>£280,000</option>
+                        <option>£300,000</option>
+                        <option>£320,000</option>
+                        <option>£340,000</option>
+                        <option>£360,000</option>
+                        <option>£380,000</option>
+                        <option>£400,000</option>
+                        <option>£420,000</option>
+                        <option>£440,000</option>
+                        <option>£460,000</option>
+                        <option>£480,000</option>
+                        <option>£500,000</option>
+                    </select>
+                </div>
+
+                <div>
+                <label for="maxPrice">Max Price:</label>
+                    <select name="maxPrice" id="maxPrice">
+                        <option>£80,000</option>
+                        <option>£100,000</option>
+                        <option>£120,000</option>
+                        <option>£140,000</option>
+                        <option>£160,000</option>
+                        <option>£180,000</option>
+                        <option>£200,000</option>
+                        <option>£220,000</option>
+                        <option>£240,000</option>
+                        <option>£260,000</option>
+                        <option>£280,000</option>
+                        <option>£300,000</option>
+                        <option>£320,000</option>
+                        <option>£340,000</option>
+                        <option>£360,000</option>
+                        <option>£380,000</option>
+                        <option>£400,000</option>
+                        <option>£420,000</option>
+                        <option>£440,000</option>
+                        <option>£460,000</option>
+                        <option>£480,000</option>
+                        <option>£500,000</option>
+                    </select>
+                </div>
+
+                <div>
+                <label for="dateAdded">Date Added:</label>
+                    <select name="dateAdded" id="dateAdded" >
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                    </select>
+                </div>
+
+                <div>
+                <label for="page">Page:</label>
+                    <select name="page" id="page">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+
+                <button>Search</button>
+        </section>
+
+        <section id = "viewingsSection">
+            <hr>
+            <h1>Properties for Sale</h1>
+
+            
+            <div class = "Properties">
+                <img src="HomeOne.png"> 
+                <img src="Bed.png"> <p>3</p>
+                <img src="House.png"> <p>Detached</p>
+                <h1>25 Milebush Road</h1>
+                <h2>Dromore, BT25 1RU</h2>
+                <p>For Sale</p>
+                <p></p>
+            </div>
+
+            <div class = "Properties">
+                <img src="HomeTwo.png"> 
+                <img src="Bed.png"> <p>2</p>
+                <img src="House.png"> <p>Detached</p>
+                <h1>5 Knockgorm Road</h1>
+                <h2>Banbridge, BT32 5QE</h2>
+                <p>For Sale</p>
+                <p>£265,000</p>
+            </div>
+
+            <div class = "Properties">
+                <img src="HomeThree.png"> 
+                <img src="Bed.png"> <p>3</p>
+                <img src="House.png"> <p>Detached</p>
+                <h1>7 Bracken Valley</h1>
+                <h2>Dromore, BT25 1TA</h2>
+                <p>For Sale</p>
+                <p>£150,000</p>
+            </div>
+
+            <div class = "Properties">
+                <img src="HomeFour.png"> 
+                <img src="Bed.png"> <p>2</p>
+                <img src="House.png"> <p>House - Mid Terrace</p>
+                <h1>10 Holm Terrace</h1>
+                <h2>Dromore, BT25 1HN</h2>
+                <p>For Sale</p>
+                <p>£85,000</p>
+            </div>
+
+            <div class = "Properties">
+                <img src="HomeFive.png"> 
+                <img src="Bed.png"> <p>3</p>
+                <img src="House.png"> <p>House - End Terrace</p>
+                <h1>64 Maypole Park</h1>
+                <h2>Down, BT25 1SH</h2>
+                <p>For Sale</p>
+                <p>£100,000</p>
+            </div>
+
+            
+
+            <div class = "Properties">
+                <img src="HomeSix.png"> 
+                <img src="Bed.png"> <p>2</p>
+                <img src="House.png"> <p>House</p>
+                <h1>52 Jubilee Heights</h1>
+                <h2>Dromore, BT25 1QQ</h2>
+                <p>For Sale</p>
+                <p>£120,000</p>
+            </div>
+
+            <output>1</output>
+            <output>Property for Sale by Dromore Homes in Northern Ireland - Page 1</output>
+
+        </section>
+
+        <!-- TODO: Get map API -->
+        <section>
+            <hr>
+            <h1>View on Map</h1>
+            <img src="Map.png"> <!-- Placeholder -->
+
+        </section>
+
+        <section>
+            <a href="#anchor">
+                Back to Top?
+            </a>
+        </section>
+
+    </body>
+    <footer>
+        <hr>
+        <h1>Opening Hours</h1>
+
+        <ul>
+            <li><strong>Monday-Friday:</strong> 9am to 5pm</li>
+            <li><strong>Saturday:</strong> By Appointment Only</li>
+            <li><Strong>Sunday:</Strong> Closed</li>
+        </ul>
+
+        <p>(Evening appointments are available by request)</p>
+
+        <img> <!-- TODO: Add intagram icon with link -->
+        <img> <!-- TODO: Add facebook icon with link -->
+
+        <h1>Dromore Homes</h1>
+        <ul>
+            <li>32 Market Square, Dromore, Co. Down, BT25 1AW</li>
+            <li>E: info@propertypartners.cc</li>
+            <li>T: 028 9269 3800</li>
+        </ul>
+
+        <button><Strong>Get In Touch</Strong></button>
+    </footer>
