@@ -37,4 +37,11 @@ ul li a#active {
     display: block;
     text-decoration: none;
   color: #FFFFFF;
+
+}
+
+hr {
+  height: 6px;
+  background-color: #9EC456;
+  border: none;
 }
