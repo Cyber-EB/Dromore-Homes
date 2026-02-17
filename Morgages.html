@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+            Mortgages
+        </title>
+        <link rel="stylesheet" href="Morgages.css">
+        <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
+    <style>
+    body {
+    font-family: 'Libre Franklin';font-size: 20px;
+    }
+</style>
+    </head>
+
+    <body>
+        <section id="Navigation">
+    <ul class="c-nav">
+        <li class="c-nav__item">
+            <a href="index.html" class="c-nav__link">
+                Home
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Contact.html" class="c-nav__link">
+                Contact
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Morgages.html" class="c-nav__link" id="active">
+                Mortgages
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Buy.html" class="c-nav__link">
+                Buy
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="About.html" class="c-nav__link">
+                About
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Booking.html" class="c-nav__link">
+                Booking
+            </a>
+        </li>
+    </ul>      
+</section>
+
+       
+        
+        <section class="mortgages-hero" id="anchor">
+    <img src="MortgagesHeaderImage.png" alt="Art of a house" class="mortgages-hero-image">
+    <div class="mortgages-hero-overlay">
+        <div class="mortgages-hero-content">
+            <hr class="accent-line-mortgages">
+            <h1>Mortgages</h1>
+            <h2>Please call 02892 693800 to arrange an appointment.</h2>
+        </div>
+    </div>
+</section>
+
+        <section class="mortgages-info-section">
+    <hr class="accent-line-mortgages-info">
+    
+    <div class="mortgages-content-wrapper">
+        <div class="mortgages-logo-container">
+            <img src="DromoreHomesLogo.png" alt="Dromore Homes Logo" class="mortgages-logo">
+        </div>
+        
+        <div class="mortgages-details">
+            <h1 class="mortgages-main-title">Mortgages</h1>
+            <h2 class="mortgages-subtitle">Mortgages Arranged</h2>
+            
+            <div class="mortgages-services">
+                <ul class="services-column">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        First Time Buyers
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Home Movers
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Buy to Let
+                    </li>
+                </ul>
+                
+                <ul class="services-column">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Right To Buy
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Re-Mortgages
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Families
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mortgages-description">
+        <p>
+            Dromore Homes are pleased to announce that we are now able to introduce 
+            our customers to a mortgage adviser who is able to provide independent 
+            mortgage advice and ensure that our customers get the best possible 
+            mortgage deal for their individual circumstances. He will compare 
+            mortgage deals from the whole of the market and explain your options in 
+            a simple and straightforward way.
+        </p>
+        
+        <p>
+            The mortgage administration team will ensure that your application 
+            is processed efficiently and quickly, they will keep you up to date 
+            with the progress.
+        </p>
+    </div>
+</section>
+
+        <section class="mortgages-form-section">
+    <hr class="accent-line-mortgages-form">
+    <h1 class="mortgages-form-title">Mortgages Enquiry Form</h1>
+    
+    <div class="mortgages-form-container">
+        <p class="mortgages-form-description">Dromore Homes are happy to provide mortgage advice</p>
+
+        <form id="mortgagesForm" onsubmit="validateMortgagesForm(event)">
+            <div class="form-group-mortgages">
+                <label for="mortgageName">Name <span class="required">*</span></label>
+                <input type="text" id="mortgageName" name="name">
+            </div>
+
+            <div class="form-group-mortgages">
+                <label for="mortgageEmail">Email Address <span class="required">*</span></label>
+                <input type="text" id="mortgageEmail" name="emailAddress">
+            </div>
+
+            <div class="form-group-mortgages">
+                <label for="mortgagePhone">Telephone Number <span class="required">*</span></label>
+                <input type="text" id="mortgagePhone" name="phoneNumber">
+            </div>
+
+            <div class="form-group-mortgages">
+                <label for="mortgageComments">Comments</label>
+                <textarea id="mortgageComments" name="comments" rows="5"></textarea>
+            </div>
+
+            <div class="mortgages-form-submit">
+                <button type="submit" class="send-enquiry-button">Send Enquiry</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<div id="mortgageValidationModal" class="validation-modal">
+    <div class="modal-content-validation">
+        <span class="modal-close-validation" onclick="closeMortgageModal()">&times;</span>
+        <div id="mortgageModalIcon" class="modal-icon"></div>
+        <h2 id="mortgageModalTitle"></h2>
+        <p id="mortgageModalMessage"></p>
+        <button class="modal-button" onclick="closeMortgageModal()">OK</button>
+    </div>
+</div>
+
+<script>
+    function validateMortgagesForm(event) {
+        event.preventDefault();
+        
+      
+        const name = document.getElementById('mortgageName').value.trim();
+        const email = document.getElementById('mortgageEmail').value.trim();
+        const phone = document.getElementById('mortgagePhone').value.trim();
+        
+     
+        if (!name) {
+            showMortgageModal('error', 'Validation Error', 'Please enter your name.');
+            return false;
+        }
+        
+        if (!email) {
+            showMortgageModal('error', 'Validation Error', 'Please enter your email address.');
+            return false;
+        }
+        
+        if (!email.includes('@')) {
+            showMortgageModal('error', 'Validation Error', 'Please enter a valid email address with @ symbol.');
+            return false;
+        }
+        
+        if (!phone) {
+            showMortgageModal('error', 'Validation Error', 'Please enter your telephone number.');
+            return false;
+        }
+        
+        const phoneDigits = phone.replace(/[\s\-\(\)]/g, '');
+        if (phoneDigits.length < 9) {
+            showMortgageModal('error', 'Validation Error', 'Telephone number must contain at least 9 digits.');
+            return false;
+        }
+        
+        showMortgageModal('success', 'Enquiry Sent!', 'Your mortgage enquiry has been submitted successfully. We will contact you soon!');
+        
+        setTimeout(() => {
+            document.getElementById('mortgagesForm').reset();
+        }, 2000);
+        
+        return false;
+    }
+    
+    function showMortgageModal(type, title, message) {
+        const modal = document.getElementById('mortgageValidationModal');
+        const modalIcon = document.getElementById('mortgageModalIcon');
+        const modalTitle = document.getElementById('mortgageModalTitle');
+        const modalMessage = document.getElementById('mortgageModalMessage');
+        const modalContent = document.querySelector('#mortgageValidationModal .modal-content-validation');
+        
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+        
+        if (type === 'error') {
+            modalIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
+            modalIcon.style.color = '#e74c3c';
+            modalContent.style.borderTop = '5px solid #e74c3c';
+        } else {
+            modalIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
+            modalIcon.style.color = '#9EC456';
+            modalContent.style.borderTop = '5px solid #9EC456';
+        }
+        
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMortgageModal() {
+        const modal = document.getElementById('mortgageValidationModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMortgageModal();
+        }
+    });
+</script>
+
+        <section class="mortgage-calculator-section">
+    <hr class="accent-line-calculator">
+    <h1 class="calculator-title">Mortgage Calculation</h1>
+    
+    <div class="calculator-container">
+        <p class="calculator-subtitle">Information on Mortgages</p>
+
+        <form id="mortgageCalculatorForm" class="calculator-form">
+            <div class="calculator-row">
+                <div class="calculator-field">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" placeholder="£250,000" oninput="calculateMortgage()">
+                </div>
+
+                <div class="calculator-field">
+                    <label for="householdIncome">Household Income</label>
+                    <input type="number" id="householdIncome" name="householdIncome" placeholder="£50,000" oninput="calculateMortgage()">
+                </div>
+            </div>
+
+            <div class="calculator-row">
+                <div class="calculator-field">
+                    <label for="deposit">Deposit (10%)</label>
+                    <input type="number" id="deposit" name="deposit" placeholder="£25,000" readonly>
+                </div>
+
+                <div class="calculator-field">
+                    <label for="loanTerm">Loan Term</label>
+                    <input type="number" id="loanTerm" name="loanTerm" placeholder="25 years" oninput="calculateMortgage()">
+                </div>
+            </div>
+
+            <div class="calculator-row">
+                <div class="calculator-field">
+                    <label for="interestRate">Interest Rate</label>
+                    <input type="number" id="interestRate" name="interestRate" placeholder="3.5%" step="0.01" oninput="calculateMortgage()">
+                </div>
+            </div>
+
+            <div class="calculator-row">
+                <div class="calculator-field">
+                    <label for="monthlyRepayment">Monthly Repayment:</label>
+                    <input type="text" id="monthlyRepayment" name="monthlyRepayment" readonly>
+                </div>
+
+                <div class="calculator-field">
+                    <label for="borrow">You Could Potentially Borrow:</label>
+                    <input type="text" id="borrow" name="borrow" readonly>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    function calculateMortgage() {
+      
+        const price = parseFloat(document.getElementById('price').value) || 0;
+        const householdIncome = parseFloat(document.getElementById('householdIncome').value) || 0;
+        const loanTerm = parseFloat(document.getElementById('loanTerm').value) || 0;
+        const interestRate = parseFloat(document.getElementById('interestRate').value) || 0;
+        
+       
+        const deposit = price * 0.10;
+        document.getElementById('deposit').value = deposit > 0 ? deposit.toFixed(2) : '';
+        
+     
+        const loanAmount = price - deposit;
+        
+      
+        if (price > 0 && loanTerm > 0 && interestRate > 0) {
+            const monthlyInterestRate = (interestRate / 100) / 12;
+            const numberOfPayments = loanTerm * 12;
+            
+        
+            const monthlyPayment = loanAmount * 
+                (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / 
+                (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+            
+            document.getElementById('monthlyRepayment').value = '£' + monthlyPayment.toFixed(2);
+        } else {
+            document.getElementById('monthlyRepayment').value = '';
+        }
+        
+    
+        if (householdIncome > 0) {
+            const potentialBorrowing = householdIncome * 4.5;
+            document.getElementById('borrow').value = '£' + potentialBorrowing.toLocaleString('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        } else {
+            document.getElementById('borrow').value = '';
+        }
+    }
+</script>
+ <section class="video-section">
+  <div class="video-container">
+    <h2>Information on Mortgages</h2>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/watch?v=CBIJwb37O_4" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+       
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="footer-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700' rel='stylesheet'>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+    <footer>
+        <a href="#anchor"> <hr aria-hidden="true"> </a>
+        
+        <div class="footer-content">
+       
+            <div class="hours-section">
+                <h1>Opening Hours</h1>
+                <ul>
+                    <li><strong>Monday - Friday:</strong> 9am to 5pm</li>
+                    <li><strong>Saturday:</strong> By Appointment Only</li>
+                    <li><strong>Sunday:</strong> Closed</li>
+                </ul>
+
+                <p class="appointment-note">(Evening appointments are available by request)</p>
+
+        
+                <div class="social-icons" role="navigation" aria-label="Social media links">
+                    <a href="https://facebook.com/yourpage" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit our Facebook page">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com/yourpage" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit our Instagram page">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+           
+            <div class="contact-info">
+                <h1>Dromore Homes</h1>
+                <ul>
+                    <li>32 Market Square, Dromore, Co. Down, BT25 1AW</li>
+                    <li>E: <a href="mailto:info@propertypartners.cc">info@propertypartners.cc</a></li>
+                    <li>T: <a href="tel:+442892693800">028 9269 3800</a></li>
+                </ul>
+
+                <a href ="Contact.html"><button class="cta-button" type="button" aria-label="Get in touch with Dromore Homes">
+                    <strong>Get In Touch</strong>
+                </button></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+
+.c-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #0F0E11;
+  opacity: 0.80;
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.c-nav__item {
+  text-decoration: none;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.c-nav__item:hover {
+  font-weight: bold;
+}
+
+ul li a#active {
+  font-weight: bolder;
+}
+
+.c-nav__link {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+hr {
+  height: 6px;
+  background-color: #9EC456;
+  border: none;
+}
+
+
+.mortgages-hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #e8f0f7;
+}
+
+.mortgages-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mortgages-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.mortgages-hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.accent-line-mortgages {
+    border: none;
+    height: 5px;
+    background-color: #9EC456;
+    margin: 0 auto 30px auto;
+    width: 350px;
+}
+
+.mortgages-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+
+.mortgages-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 968px) {
+    .mortgages-hero {
+        min-height: 400px;
+    }
+    
+    .mortgages-hero-overlay {
+        padding-top: 60px;
+    }
+    
+    .mortgages-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .mortgages-hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .accent-line-mortgages {
+        width: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mortgages-hero {
+        min-height: 300px;
+    }
+    
+    .mortgages-hero-overlay {
+        padding-top: 40px;
+    }
+    
+    .mortgages-hero-content {
+        padding: 15px;
+    }
+    
+    .mortgages-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .mortgages-hero h2 {
+        font-size: 1.1rem;
+    }
+    
+    .accent-line-mortgages {
+        width: 200px;
+        height: 4px;
+    }
+}
+
+.mortgages-info-section {
+    padding: 60px 5%;
+    background-color: #f5f5f5;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.accent-line-mortgages-info {
+    border: none;
+    height: 5px;
+    background-color: #9EC456;
+    margin: 0 0 40px 0;
+    width: 100%;
+}
+
+.mortgages-content-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.mortgages-logo-container {
+    flex: 0 0 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mortgages-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mortgages-details {
+    flex: 1;
+}
+
+.mortgages-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin: 0 0 10px 0;
+}
+
+.mortgages-subtitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3a3a3a;
+    margin: 0 0 25px 0;
+}
+
+.mortgages-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.services-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-column li {
+    font-size: 1.05rem;
+    color: #3a3a3a;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.services-column li i {
+    color: #9EC456;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.mortgages-description {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mortgages-description p {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+}
+
+.mortgages-description p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 968px) {
+    .mortgages-content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .mortgages-logo-container {
+        flex: 0 0 auto;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .mortgages-main-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .mortgages-subtitle {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .mortgages-services {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .mortgages-info-section {
+        padding: 40px 5%;
+    }
+    
+    .mortgages-logo-container {
+        padding: 20px;
+        max-width: 200px;
+    }
+    
+    .mortgages-main-title {
+        font-size: 1.6rem;
+    }
+    
+    .mortgages-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .services-column li {
+        font-size: 1rem;
+    }
+    
+    .mortgages-description {
+        padding: 25px 20px;
+    }
+    
+    .mortgages-description p {
+        font-size: 1rem;
+    }
+}
+
+.mortgages-form-section {
+    padding: 60px 5%;
+    background-color: #f5f5f5;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.accent-line-mortgages-form {
+    border: none;
+    height: 5px;
+    background-color: #9EC456;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+
+.mortgages-form-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mortgages-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mortgages-form-description {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.form-group-mortgages {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group-mortgages label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3a3a3a;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.form-group-mortgages input[type="text"],
+.form-group-mortgages textarea {
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    border: 2px solid #d0d0d0;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group-mortgages input[type="text"]:focus,
+.form-group-mortgages textarea:focus {
+    outline: none;
+    border-color: #9EC456;
+    background-color: #ffffff;
+}
+
+.form-group-mortgages textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.mortgages-form-submit {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.send-enquiry-button {
+    background-color: #292D32;
+    color: #9EC456;
+    border: 3px solid #31754C;
+    padding: 15px 45px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Libre Franklin', sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.send-enquiry-button:hover {
+    background-color: #31754C;
+    color: #ffffff;
+    border-color: #9EC456;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.send-enquiry-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .mortgages-form-container {
+        padding: 30px 20px;
+    }
+    
+    .mortgages-form-title {
+        font-size: 2rem;
+    }
+    
+    .mortgages-form-description {
+        font-size: 1rem;
+    }
+    
+    .send-enquiry-button {
+        padding: 12px 35px;
+        font-size: 1.1rem;
+    }
+    
+    .mortgages-form-submit {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .mortgages-form-section {
+        padding: 40px 5%;
+    }
+    
+    .mortgages-form-title {
+        font-size: 1.6rem;
+    }
+    
+    .mortgages-form-description {
+        font-size: 0.95rem;
+    }
+}
+
+.mortgage-calculator-section {
+    padding: 60px 5%;
+    background-color: #f5f5f5;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.accent-line-calculator {
+    border: none;
+    height: 5px;
+    background-color: #9EC456;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+
+.calculator-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calculator-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-subtitle {
+    font-size: 1.2rem;
+    color: #9EC456;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculator-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.calculator-row:has(.calculator-field:only-child) {
+    grid-template-columns: 1fr;
+}
+
+.calculator-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-field label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3a3a3a;
+    margin-bottom: 8px;
+}
+
+.calculator-field input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    border: 2px solid #d0d0d0;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    background-color: #fafafa;
+}
+
+.calculator-field input:focus {
+    outline: none;
+    border-color: #9EC456;
+    background-color: #ffffff;
+}
+
+.calculator-field input[readonly] {
+    background-color: #f0f0f0;
+    color: #666666;
+    cursor: not-allowed;
+    font-weight: 600;
+}
+
+.calculator-field input::placeholder {
+    color: #aaaaaa;
+}
+
+.calculator-row:last-child .calculator-field input[readonly] {
+    background-color: #e8f5d5;
+    color: #2c5f1e;
+    border-color: #9EC456;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 30px 20px;
+    }
+    
+    .calculator-title {
+        font-size: 2rem;
+    }
+    
+    .calculator-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .calculator-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mortgage-calculator-section {
+        padding: 40px 5%;
+    }
+    
+    .calculator-title {
+        font-size: 1.6rem;
+    }
+    
+    .calculator-subtitle {
+        font-size: 1rem;
+    }
+    
+    .calculator-field input {
+        font-size: 0.95rem;
+    }
+}
+
+.video-section {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  margin-top: 40px;
+}
+
+.video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+    --color-primary-green: #9EC456;
+    --color-background-dark: #292D32;
+    --color-button-border: #31754C;
+    --color-text-light: #FFFFFF;
+    --transition-speed: 250ms;
+    --transition-ease: ease-in-out;
+}
+
+
+footer {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    padding: 3rem 4rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+footer hr {
+    border: none;
+    height: 3px;
+    background-color: var(--color-primary-green);
+    margin: 0 0 2.5rem 0;
+    transition: all var(--transition-speed) var(--transition-ease);
+    cursor: pointer; 
+}
+
+footer hr:hover {
+    box-shadow: 0 0 8px var(--color-primary-green),
+                0 0 12px rgba(158, 196, 86, 0.5);
+    transform: scaleY(1.2);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 4rem;
+    align-items: start;
+}
+
+footer h1 {
+    color: var(--color-primary-green);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+footer ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+footer ul li strong {
+    color: var(--color-primary-green);
+    font-weight: 600;
+}
+
+.appointment-note {
+    font-size: 0.95rem;
+    margin: 1.5rem 0 1.5rem 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary-green);
+    border-radius: 50%;
+    color: var(--color-background-dark);
+    text-decoration: none;
+    transition: all var(--transition-speed) var(--transition-ease);
+    font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-text-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(158, 196, 86, 0.4);
+}
+
+.social-icons a:focus-visible {
+    outline: 2px solid var(--color-primary-green);
+    outline-offset: 3px;
+}
+
+.social-icons a i,
+.social-icons a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info ul li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+.contact-info a:hover {
+    color: var(--color-primary-green);
+}
+
+.contact-info a:focus-visible {
+    outline: 2px solid var(--color-primary-green);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.cta-button {
+    align-self: flex-start;
+    margin-top: 2rem;
+    padding: 0.875rem 2.5rem;
+    background-color: transparent;
+    border: 2px solid var(--color-button-border);
+    border-radius: 50px;
+    color: var(--color-primary-green);
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 300ms var(--transition-ease);
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-button-border);
+    color: var(--color-text-light);
+    border-color: var(--color-button-border);
+    box-shadow: 0 4px 16px rgba(49, 117, 76, 0.3);
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(49, 117, 76, 0.3);
+}
+
+.cta-button:focus-visible {
+    outline: 3px solid var(--color-primary-green);
+    outline-offset: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; 
+        gap: 2.5rem;
+    }
+
+    footer h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    footer ul li {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        width: 100%; 
+        align-self: stretch;
+        padding: 1rem 2rem;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 1.5rem 1rem;
+    }
+
+    footer hr {
+        margin-bottom: 2rem;
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
+
+    footer h1 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    footer hr,
+    .social-icons a,
+    .contact-info a,
+    .cta-button {
+        transition: none;
+    }
+
+    .social-icons a:hover,
+    .cta-button:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    footer {
+        border: 1px solid var(--color-text-light);
+    }
+
+    .cta-button {
+        border-width: 3px;
+    }
+}

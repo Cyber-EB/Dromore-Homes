@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+            Booking
+        </title>
+        <link rel="stylesheet" href="Booking.css">
+        <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
+    <style>
+    body {
+    font-family: 'Libre Franklin';font-size: 20px;
+    }
+</style>
+    </head>
+
+    <body>
+
+       <section id="Navigation">
+    <ul class="c-nav">
+        <li class="c-nav__item">
+            <a href="index.html" class="c-nav__link" >
+                Home
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Contact.html" class="c-nav__link">
+                Contact
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Morgages.html" class="c-nav__link">
+                Mortgages
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Buy.html" class="c-nav__link">
+                Buy
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="About.html" class="c-nav__link">
+                About
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Booking.html" class="c-nav__link" id="active">
+                Booking
+            </a>
+        </li>
+    </ul>      
+</section>
+
+
+       <section class="booking-hero" id="anchor">
+    <img src="BookingHeaderImage.png" alt="Interior of home" class="booking-hero-image">
+    <div class="booking-hero-overlay">
+        <div class="booking-hero-content">
+            <hr class="accent-line-booking">
+            <h1>Free Booking</h1>
+            <h2>Dromore Homes County Down</h2>
+        </div>
+    </div>
+</section>
+
+        <section class="booking-form-section">
+    <hr class="accent-line-form">
+    <h1 class="form-title">Arrange a Booking</h1>
+    
+    <div class="form-container">
+        <p class="form-description">
+            Dromore Homes are happy to provide a resale valuation free of charge.
+        </p>
+
+        <form id="bookingForm" onsubmit="validateForm(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                    <input type="text" id="phoneNumber" name="phoneNumber">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="emailAddress">Email Address <span class="required">*</span></label>
+                    <input type="text" id="emailAddress" name="emailAddress">
+                </div>
+
+                <div class="form-group">
+                    <label for="preferredTimeForCallback">Preferred Time for Callback</label>
+                    <input type="text" id="preferredTimeForCallback" name="preferredTimeForCallback">
+                </div>
+            </div>
+
+            <div class="form-group-full">
+                <label for="propertyAddress">Property Address <span class="required">*</span></label>
+                <textarea id="propertyAddress" name="propertyAddress" rows="4"></textarea>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" class="book-button">Book</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<div id="validationModal" class="validation-modal">
+    <div class="modal-content-validation">
+        <span class="modal-close-validation" onclick="closeValidationModal()">&times;</span>
+        <div id="modalIcon" class="modal-icon"></div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalMessage"></p>
+        <button class="modal-button" onclick="closeValidationModal()">OK</button>
+    </div>
+</div>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+        
+   
+        const name = document.getElementById('name').value.trim();
+        const phoneNumber = document.getElementById('phoneNumber').value.trim();
+        const emailAddress = document.getElementById('emailAddress').value.trim();
+        const propertyAddress = document.getElementById('propertyAddress').value.trim();
+        
+       
+        if (!name) {
+            showModal('error', 'Validation Error', 'Please enter your name.');
+            return false;
+        }
+        
+        if (!phoneNumber) {
+            showModal('error', 'Validation Error', 'Please enter your phone number.');
+            return false;
+        }
+        
+    
+        const phoneDigits = phoneNumber.replace(/[\s\-\(\)]/g, '');
+        if (phoneDigits.length < 9) {
+            showModal('error', 'Validation Error', 'Phone number must contain at least 9 digits.');
+            return false;
+        }
+        
+        if (!emailAddress) {
+            showModal('error', 'Validation Error', 'Please enter your email address.');
+            return false;
+        }
+        
+        if (!emailAddress.includes('@')) {
+            showModal('error', 'Validation Error', 'Please enter a valid email address with @ symbol.');
+            return false;
+        }
+        
+        if (!propertyAddress) {
+            showModal('error', 'Validation Error', 'Please enter the property address.');
+            return false;
+        }
+        
+   
+        showModal('success', 'Success!', 'Your booking request has been submitted successfully. We will contact you soon!');
+        
+      
+        setTimeout(() => {
+            document.getElementById('bookingForm').reset();
+        }, 2000);
+        
+        return false;
+    }
+    
+    function showModal(type, title, message) {
+        const modal = document.getElementById('validationModal');
+        const modalIcon = document.getElementById('modalIcon');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalContent = document.querySelector('.modal-content-validation');
+        
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+        
+        if (type === 'error') {
+            modalIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
+            modalIcon.style.color = '#e74c3c';
+            modalContent.style.borderTop = '5px solid #e74c3c';
+        } else {
+            modalIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
+            modalIcon.style.color = '#9EC456';
+            modalContent.style.borderTop = '5px solid #9EC456';
+        }
+        
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeValidationModal() {
+        const modal = document.getElementById('validationModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+ 
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeValidationModal();
+        }
+    });
+</script>
+    </body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="footer-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700' rel='stylesheet'>
+    
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+    <footer>
+        <a href="#anchor"> <hr aria-hidden="true"> </a>
+        
+        <div class="footer-content">
+       
+            <div class="hours-section">
+                <h1>Opening Hours</h1>
+                <ul>
+                    <li><strong>Monday - Friday:</strong> 9am to 5pm</li>
+                    <li><strong>Saturday:</strong> By Appointment Only</li>
+                    <li><strong>Sunday:</strong> Closed</li>
+                </ul>
+
+                <p class="appointment-note">(Evening appointments are available by request)</p>
+
+         
+                <div class="social-icons" role="navigation" aria-label="Social media links">
+                    <a href="https://facebook.com/yourpage" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit our Facebook page">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com/yourpage" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit our Instagram page">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+      
+            <div class="contact-info">
+                <h1>Dromore Homes</h1>
+                <ul>
+                    <li>32 Market Square, Dromore, Co. Down, BT25 1AW</li>
+                    <li>E: <a href="mailto:info@propertypartners.cc">info@propertypartners.cc</a></li>
+                    <li>T: <a href="tel:+442892693800">028 9269 3800</a></li>
+                </ul>
+
+                <a href ="Contact.html"><button class="cta-button" type="button" aria-label="Get in touch with Dromore Homes">
+                    <strong>Get In Touch</strong>
+                </button></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

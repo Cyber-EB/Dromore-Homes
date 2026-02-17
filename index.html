@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+            Home
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="About.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
+        <link rel="stylesheet" href="Home.css">
+        <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
+    
+    
+    <style>
+    body {
+    font-family: 'Libre Franklin';font-size: 20px;
+    }
+</style>
+    </head>
+
+    <body>
+
+       <section id="Navigation">
+    <ul class="c-nav">
+        <li class="c-nav__item">
+            <a href="index.html" class="c-nav__link" id="active">
+                Home
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Contact.html" class="c-nav__link">
+                Contact
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Morgages.html" class="c-nav__link">
+                Mortgages
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Buy.html" class="c-nav__link">
+                Buy
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="About.html" class="c-nav__link">
+                About
+            </a>
+        </li>
+        <li class="c-nav__item">
+            <a href="Booking.html" class="c-nav__link">
+                Booking
+            </a>
+        </li>
+    </ul>      
+</section>
+
+        
+
+        <section class="hero-container" id="anchor">
+        <img src="HomeHeader.png" alt="Dromore Homes Entrance" class="hero-image">
+        <div class="hero-content">
+            <h2 class="tagline">The Perfect Family Home...</h2>
+            <h1 class="main-title">At Dromore<br>Homes</h1>
+            <h2 class="address">32 Market Square</h2>
+        </div>
+        <img src="DromoreHomesLogo.png" alt="Dromore Homes Logo" class="logo">
+    </section>
+
+        <section class="about-section">
+    <hr class="accent-line">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="JuliePyper.png" alt="Julie from Dromore Homes">
+        </div>
+        <div class="about-content">
+            <h1>Find your next home with Dromore Homes</h1>
+            <p>
+                Dromore Homes is an estate agency in Dromore, Co Down. Established in 1993, 
+                the company headed by Julie
+            </p>
+            <p>
+                To provide the best possible service, we believe close communication between 
+                agent and client is essential. Our experienced team is in place to provide you 
+                with the most professional, responsive and personalised service possible.
+            </p>
+            <a href="About.html"><button class="about-button">About Us</button></a>
+            
+        </div>
+    </div>
+</section>
+
+        <section class="cta-section">
+    <hr class="accent-line-cta">
+    <div class="cta-background">
+        <img src="HomeBackground.png" alt="Dromore Homes Property" class="cta-image">
+        <div class="cta-overlay">
+            <h1>Book Today!</h1>
+            <p>Booking today as time is what gives now you a competitive advantage over future you</p>
+            <a href="Booking.html"><button class="cta-button">Book Today</button></a>
+            
+        </div>
+    </div>
+</section>
+
+        <section class="properties-section">
+    <hr class="accent-line-properties">
+    <h1 class="properties-title">Latest Properties for Sale</h1>
+    
+    <div class="carousel-wrapper">
+        <button class="carousel-arrow carousel-arrow-left" onclick="moveCarousel(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="carousel-container">
+            <div class="carousel-track">
+              
+                <div class="property-card">
+                    <img src="HomeOne.png" alt="25 Milebush Road" class="property-image" onclick="openModal('HomeOne.png')">
+                    <div class="property-info">
+                        <div class="property-badges">
+                            <span class="badge">
+                                <img src="Bed.png" alt="Bedrooms" class="icon-bed">
+                                3
+                            </span>
+                            <span class="badge">
+                                <img src="House.png" alt="Property Type" class="icon-house">
+                                Detached
+                            </span>
+                        </div>
+                        <h2 class="property-address">25 Milebush Road</h2>
+                        <p class="property-location">Dromore, BT25 1RU</p>
+                        <p class="property-status">For Sale</p>
+                        <p class="property-price">£350,000</p>
+                    </div>
+                </div>
+
+         
+                <div class="property-card">
+                    <img src="HomeTwo.png" alt="5 Knockgorm Road" class="property-image" onclick="openModal('HomeTwo.png')">
+                    <div class="property-info">
+                        <div class="property-badges">
+                            <span class="badge">
+                                <img src="Bed.png" alt="Bedrooms" class="icon-bed">
+                                2
+                            </span>
+                            <span class="badge">
+                                <img src="House.png" alt="Property Type" class="icon-house">
+                                Detached
+                            </span>
+                        </div>
+                        <h2 class="property-address">5 Knockgorm Road</h2>
+                        <p class="property-location">Banbridge, BT32 5QE</p>
+                        <p class="property-status">For Sale</p>
+                        <p class="property-price">£265,000</p>
+                    </div>
+                </div>
+
+          
+                <div class="property-card">
+                    <img src="HomeThree.png" alt="7 Bracken Valley" class="property-image" onclick="openModal('HomeThree.png')">
+                    <div class="property-info">
+                        <div class="property-badges">
+                            <span class="badge">
+                                <img src="Bed.png" alt="Bedrooms" class="icon-bed">
+                                3
+                            </span>
+                            <span class="badge">
+                                <img src="House.png" alt="Property Type" class="icon-house">
+                                Detached
+                            </span>
+                        </div>
+                        <h2 class="property-address">7 Bracken Valley</h2>
+                        <p class="property-location">Dromore, BT25 1TA</p>
+                        <p class="property-status">For Sale</p>
+                        <p class="property-price">£150,000</p>
+                    </div>
+                </div>
+
+           
+                <div class="property-card">
+                    <img src="HomeFour.png" alt="10 Holm Terrace" class="property-image" onclick="openModal('HomeFour.png')">
+                    <div class="property-info">
+                        <div class="property-badges">
+                            <span class="badge">
+                                <img src="Bed.png" alt="Bedrooms" class="icon-bed">
+                                2
+                            </span>
+                            <span class="badge">
+                                <img src="House.png" alt="Property Type" class="icon-house">
+                                House - Mid Terrace
+                            </span>
+                        </div>
+                        <h2 class="property-address">10 Holm Terrace</h2>
+                        <p class="property-location">Dromore, BT25 1HN</p>
+                        <p class="property-status">For Sale</p>
+                        <p class="property-price">£85,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-arrow carousel-arrow-right" onclick="moveCarousel(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
+
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+    let currentIndex = 0;
+    let autoRotateInterval;
+
+   
+    function moveCarousel(direction) {
+        const track = document.querySelector('.carousel-track');
+        const cards = document.querySelectorAll('.property-card');
+        const totalCards = cards.length;
+        
+        currentIndex += direction;
+        
+      
+        if (currentIndex < 0) {
+            currentIndex = totalCards - 3;
+        } else if (currentIndex > totalCards - 3) {
+            currentIndex = 0;
+        }
+        
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 30;
+        const offset = -(currentIndex * (cardWidth + gap));
+        
+        track.style.transform = `translateX(${offset}px)`;
+        
+     
+        resetAutoRotate();
+    }
+
+  
+    function startAutoRotate() {
+        autoRotateInterval = setInterval(() => {
+            moveCarousel(1);
+        }, 5000); 
+    }
+
+    function resetAutoRotate() {
+        clearInterval(autoRotateInterval);
+        startAutoRotate();
+    }
+
+    
+    function openModal(imageSrc) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = 'flex';
+        modalImg.src = imageSrc;
+        document.body.style.overflow = 'hidden';
+    }
+
+  
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+   
+    window.addEventListener('load', () => {
+        startAutoRotate();
+    });
+
+   
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+</script>
+
+        
+        <section class="location-section">
+    <hr class="accent-line-location">
+    <div class="location-container">
+        <div class="map-wrapper">
+            <iframe 
+                src="https://maps.google.com/maps?q=32+Market+Square,+Dromore,+County+Down&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="location-content">
+            <h1>Dromore Homes located near you! Come today</h1>
+            <p>We are located in 32 Market Square in Dromore and we provide the highest homes for families near by.</p>
+            <a href="Contact.html"><button class="contact-button">Contact Us</button></a>
+         
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <hr class="accent-line-reviews">
+    
+    <div class="reviews-header">
+        <div class="header-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+    
+    <div class="reviews-carousel-wrapper">
+        <button class="review-arrow review-arrow-left" onclick="moveReviews(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="reviews-carousel-container">
+            <div class="reviews-track">
+            
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background-color: #5AB3B8;">M</div>
+                        <div class="reviewer-info">
+                            <h3>Margaret Boden</h3>
+                            <p class="review-date">23 October 2021</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        <p class="review-content">Our experience was first class from start to finish. From deciding to sell, the speed and efficiency of Julie was excellent. Valuation, photographs... <span class="read-more" onclick="toggleReview(this)">Read More</span></p>
+                        <p class="review-full" style="display: none;">Our experience was first class from start to finish. From deciding to sell, the speed and efficiency of Julie was excellent. Valuation, photographs, marketing and communication throughout the entire process was professional and timely. Would highly recommend Dromore Homes. <span class="read-less" onclick="toggleReview(this)">Read Less</span></p>
+                    </div>
+                </div>
+
+             
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background-color: #A97BB8;">P</div>
+                        <div class="reviewer-info">
+                            <h3>Patrick McSmith</h3>
+                            <p class="review-date">27 January 2022</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        <p class="review-content">No issues at all with Julie and the team. I would highly recommend <span class="read-more" onclick="toggleReview(this)">Read More</span></p>
+                        <p class="review-full" style="display: none;">No issues at all with Julie and the team. I would highly recommend them for anyone looking to buy or sell property in the Dromore area. The service was exceptional and they went above and beyond to ensure everything went smoothly. <span class="read-less" onclick="toggleReview(this)">Read Less</span></p>
+                    </div>
+                </div>
+
+          
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background-color: #E89C5C;">S</div>
+                        <div class="reviewer-info">
+                            <h3>Sarah Thompson</h3>
+                            <p class="review-date">15 March 2022</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        <p class="review-content">Great service overall. Julie and her team were very helpful throughout the buying process. Communication was good... <span class="read-more" onclick="toggleReview(this)">Read More</span></p>
+                        <p class="review-full" style="display: none;">Great service overall. Julie and her team were very helpful throughout the buying process. Communication was good and they kept us updated at every stage. There were a few minor delays but nothing that couldn't be resolved. Would definitely use them again. <span class="read-less" onclick="toggleReview(this)">Read Less</span></p>
+                    </div>
+                </div>
+
+         
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background-color: #6B9E78;">J</div>
+                        <div class="reviewer-info">
+                            <h3>James O'Neill</h3>
+                            <p class="review-date">8 June 2022</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        <p class="review-content">Absolutely brilliant experience from start to finish. Julie made the whole process stress-free and was always available... <span class="read-more" onclick="toggleReview(this)">Read More</span></p>
+                        <p class="review-full" style="display: none;">Absolutely brilliant experience from start to finish. Julie made the whole process stress-free and was always available to answer questions. The attention to detail and professionalism shown by the entire team at Dromore Homes was outstanding. Can't recommend them highly enough! <span class="read-less" onclick="toggleReview(this)">Read Less</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="review-arrow review-arrow-right" onclick="moveReviews(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
+
+<script>
+    let reviewIndex = 0;
+    let reviewAutoRotateInterval;
+
+
+    function moveReviews(direction) {
+        const track = document.querySelector('.reviews-track');
+        const cards = document.querySelectorAll('.review-card');
+        const totalCards = cards.length;
+        
+        reviewIndex += direction;
+        
+       
+        if (reviewIndex < 0) {
+            reviewIndex = totalCards - 2;
+        } else if (reviewIndex > totalCards - 2) {
+            reviewIndex = 0;
+        }
+        
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 30;
+        const offset = -(reviewIndex * (cardWidth + gap));
+        
+        track.style.transform = `translateX(${offset}px)`;
+        
+        
+        resetReviewAutoRotate();
+    }
+
+    
+    function startReviewAutoRotate() {
+        reviewAutoRotateInterval = setInterval(() => {
+            moveReviews(1);
+        }, 6000); 
+    }
+
+    function resetReviewAutoRotate() {
+        clearInterval(reviewAutoRotateInterval);
+        startReviewAutoRotate();
+    }
+
+  
+    function toggleReview(element) {
+        const reviewText = element.closest('.review-text');
+        const shortContent = reviewText.querySelector('.review-content');
+        const fullContent = reviewText.querySelector('.review-full');
+        
+        if (shortContent.style.display !== 'none') {
+            shortContent.style.display = 'none';
+            fullContent.style.display = 'block';
+        } else {
+            shortContent.style.display = 'block';
+            fullContent.style.display = 'none';
+        }
+    }
+
+   
+    window.addEventListener('load', () => {
+        startReviewAutoRotate();
+    });
+</script>
+
+    </body>
+    
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="footer-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700' rel='stylesheet'>
+    
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+    <footer>
+        <a href="#anchor"> <hr aria-hidden="true"> </a>
+        
+        <div class="footer-content">
+     
+            <div class="hours-section">
+                <h1>Opening Hours</h1>
+                <ul>
+                    <li><strong>Monday - Friday:</strong> 9am to 5pm</li>
+                    <li><strong>Saturday:</strong> By Appointment Only</li>
+                    <li><strong>Sunday:</strong> Closed</li>
+                </ul>
+
+                <p class="appointment-note">(Evening appointments are available by request)</p>
+
+               
+                <div class="social-icons" role="navigation" aria-label="Social media links">
+                    <a href="https://facebook.com/yourpage" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit our Facebook page">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com/yourpage" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit our Instagram page">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+         
+            <div class="contact-info">
+                <h1>Dromore Homes</h1>
+                <ul>
+                    <li>32 Market Square, Dromore, Co. Down, BT25 1AW</li>
+                    <li>E: <a href="mailto:info@propertypartners.cc">info@propertypartners.cc</a></li>
+                    <li>T: <a href="tel:+442892693800">028 9269 3800</a></li>
+                </ul>
+
+                <a href ="Contact.html"><button class="cta-button" type="button" aria-label="Get in touch with Dromore Homes">
+                    <strong>Get In Touch</strong>
+                </button></a>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
