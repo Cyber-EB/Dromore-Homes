@@ -162,99 +162,6 @@
     </div>
 </section>
 
-
-<div id="mortgageValidationModal" class="validation-modal">
-    <div class="modal-content-validation">
-        <span class="modal-close-validation" onclick="closeMortgageModal()">&times;</span>
-        <div id="mortgageModalIcon" class="modal-icon"></div>
-        <h2 id="mortgageModalTitle"></h2>
-        <p id="mortgageModalMessage"></p>
-        <button class="modal-button" onclick="closeMortgageModal()">OK</button>
-    </div>
-</div>
-
-<script>
-    function validateMortgagesForm(event) {
-        event.preventDefault();
-        
-      
-        const name = document.getElementById('mortgageName').value.trim();
-        const email = document.getElementById('mortgageEmail').value.trim();
-        const phone = document.getElementById('mortgagePhone').value.trim();
-        
-     
-        if (!name) {
-            showMortgageModal('error', 'Validation Error', 'Please enter your name.');
-            return false;
-        }
-        
-        if (!email) {
-            showMortgageModal('error', 'Validation Error', 'Please enter your email address.');
-            return false;
-        }
-        
-        if (!email.includes('@')) {
-            showMortgageModal('error', 'Validation Error', 'Please enter a valid email address with @ symbol.');
-            return false;
-        }
-        
-        if (!phone) {
-            showMortgageModal('error', 'Validation Error', 'Please enter your telephone number.');
-            return false;
-        }
-        
-        const phoneDigits = phone.replace(/[\s\-\(\)]/g, '');
-        if (phoneDigits.length < 9) {
-            showMortgageModal('error', 'Validation Error', 'Telephone number must contain at least 9 digits.');
-            return false;
-        }
-        
-        showMortgageModal('success', 'Enquiry Sent!', 'Your mortgage enquiry has been submitted successfully. We will contact you soon!');
-        
-        setTimeout(() => {
-            document.getElementById('mortgagesForm').reset();
-        }, 2000);
-        
-        return false;
-    }
-    
-    function showMortgageModal(type, title, message) {
-        const modal = document.getElementById('mortgageValidationModal');
-        const modalIcon = document.getElementById('mortgageModalIcon');
-        const modalTitle = document.getElementById('mortgageModalTitle');
-        const modalMessage = document.getElementById('mortgageModalMessage');
-        const modalContent = document.querySelector('#mortgageValidationModal .modal-content-validation');
-        
-        modalTitle.textContent = title;
-        modalMessage.textContent = message;
-        
-        if (type === 'error') {
-            modalIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
-            modalIcon.style.color = '#e74c3c';
-            modalContent.style.borderTop = '5px solid #e74c3c';
-        } else {
-            modalIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
-            modalIcon.style.color = '#9EC456';
-            modalContent.style.borderTop = '5px solid #9EC456';
-        }
-        
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeMortgageModal() {
-        const modal = document.getElementById('mortgageValidationModal');
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeMortgageModal();
-        }
-    });
-</script>
-
         <section class="mortgage-calculator-section">
     <hr class="accent-line-calculator">
     <h1 class="calculator-title">Mortgage Calculation</h1>
@@ -427,4 +334,5 @@
 </body>
 
 </html>
+
 
